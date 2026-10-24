@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142b4a">
+<meta name="description" content="Россия — её история, культура, природа, наука и достижения.">
+<title>Россия — страна с большим сердцем</title>
+<style>
+:root{--navy:#102744;--blue:#1c4f85;--red:#c83d45;--gold:#e6c477;--paper:#f4f2ec;--ink:#17253a;--muted:#657187;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.topline{height:5px;background:linear-gradient(to right,#fff 0 33.33%,#24548b 33.33% 66.66%,#c73b45 66.66%)}
+header{position:sticky;top:0;z-index:10;background:rgba(16,39,68,.96);color:white;backdrop-filter:blur(10px);box-shadow:0 4px 20px #0c1b2c22}
+.nav{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.03em}.emblem{width:42px;height:42px;border:1px solid #ffffff66;border-radius:50%;display:grid;place-items:center;font-size:22px;color:var(--gold)}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:#e3eaf3}nav a:hover{color:var(--gold)}
+.hero{min-height:590px;color:white;position:relative;overflow:hidden;background:linear-gradient(90deg,#0b2038f2 0%,#0b2038cc 48%,#0b203844 100%),url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:7px;background:linear-gradient(to right,#fff 0 33.33%,#24548b 33.33% 66.66%,#c73b45 66.66%)}
+.hero-inner{max-width:1160px;margin:auto;padding:100px 22px 95px;position:relative;z-index:1}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:800}
+h1{font-size:clamp(42px,7vw,82px);line-height:1.02;max-width:780px;margin:20px 0 24px;letter-spacing:-.045em}
+.hero p{font-size:clamp(17px,2vw,21px);max-width:650px;color:#e7edf5}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:7px;font-weight:750;font-size:14px;transition:.2s;border:1px solid transparent}.btn.primary{background:var(--gold);color:#17253a}.btn.secondary{border-color:#ffffff80;color:white;background:#ffffff0d}.btn:hover{transform:translateY(-2px)}
+.container{max-width:1160px;margin:auto;padding:78px 22px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}.kicker{color:var(--red);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}h2{font-size:clamp(29px,4vw,44px);line-height:1.12;margin:9px 0 0;letter-spacing:-.03em}.intro{max-width:550px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px #142b4a0d;border:1px solid #e5e4df;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-5px);box-shadow:0 16px 34px #142b4a16}
+.card-img{height:205px;background-size:cover;background-position:center;position:relative}.card-img span{position:absolute;left:15px;bottom:15px;background:#102744e8;color:white;border-radius:4px;padding:5px 9px;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.card-body{padding:23px}.card h3{font-size:22px;margin:0 0 9px;line-height:1.2}.card p{color:var(--muted);font-size:15px;margin:0 0 18px}.text-link{font-size:13px;font-weight:800;color:var(--blue)}
+.quote{background:var(--navy);color:white;position:relative;overflow:hidden}.quote:before{content:"РОССИЯ";position:absolute;right:-25px;bottom:-90px;font-size:clamp(100px,20vw,260px);font-weight:900;color:#ffffff08;letter-spacing:-.08em}
+.quote-inner{max-width:1160px;margin:auto;padding:75px 22px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.quote h2{font-size:clamp(30px,4vw,48px)}.quote p{color:#d9e2ed}.quote-mark{font-size:64px;color:var(--gold);line-height:1}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.stat{padding:23px;border:1px solid #ffffff25;border-radius:10px;background:#ffffff08}.stat strong{display:block;font-size:30px;color:var(--gold)}.stat span{font-size:13px;color:#d9e2ed}
+.places{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.place-large{min-height:450px;background:linear-gradient(0deg,#0b2038e8,#0b203800 70%),url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:15px;color:white;display:flex;align-items:end;padding:30px}.place-large h3{font-size:34px;margin:0 0 8px}.place-large p{max-width:470px;color:#e7edf5;margin:0}.place-stack{display:grid;grid-template-rows:1fr 1fr;gap:20px}.place-small{min-height:215px;border-radius:15px;color:white;display:flex;align-items:end;padding:25px;background-size:cover;background-position:center;position:relative;overflow:hidden}.place-small:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b2038d9,transparent 90%)}.place-small div{position:relative}.place-small h3{margin:0;font-size:25px}.place-small p{margin:4px 0 0;color:#e7edf5;font-size:14px}
+.values{background:#e9e6dc}.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.value{padding:25px;background:#ffffffa8;border-radius:10px}.value .icon{font-size:28px}.value h3{margin:14px 0 6px;font-size:18px}.value p{margin:0;color:var(--muted);font-size:14px}
+footer{background:#0b1b30;color:#d7e0eb}.footer-inner{max-width:1160px;margin:auto;padding:36px 22px;display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}.footer-small{font-size:12px;color:#9dabbc;max-width:600px}
+@media(max-width:800px){nav{gap:12px;font-size:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.quote-inner{grid-template-columns:1fr;gap:28px}.places{grid-template-columns:1fr}.place-large{min-height:350px}.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.nav{align-items:flex-start;flex-direction:column;gap:10px}nav{gap:14px}.hero-inner{padding-top:75px}.container{padding-top:55px;padding-bottom:55px}.cards{grid-template-columns:1fr}.section-head{display:block}.intro{margin-top:12px}.values-grid{grid-template-columns:1fr 1fr}.value{padding:17px}.stats{gap:10px}.stat{padding:16px}.stat strong{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="nav">
+<a class="brand" href="#home"><span class="emblem">✦</span><span>РОССИЯ <small style="display:block;font-weight:500;font-size:10px;letter-spacing:.19em;color:#cbd5e1">ИСТОРИЯ · КУЛЬТУРА · БУДУЩЕЕ</small></span></a>
+<nav aria-label="Главная навигация"><a href="#about">О стране</a><a href="#heritage">Наследие</a><a href="#places">Природа и города</a><a href="#values">Что нас объединяет</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow">Одна страна · множество историй</div>
+<h1>Россия — страна<br>с большим сердцем</h1>
+<p>От древних городов до бескрайних просторов, от великих литературных традиций до научных открытий — знакомьтесь с многообразием России.</p>
+<div class="actions"><a class="btn primary" href="#heritage">Открыть наследие&nbsp; ↘</a><a class="btn secondary" href="#places">Путешествовать по стране</a></div>
+</div></section>
+<section class="container" id="about">
+<div class="section-head"><div><div class="kicker">О стране</div><h2>Многообразие — наша сила</h2></div><p class="intro">Россия — крупнейшая по площади страна мира. Здесь соседствуют разные природные зоны, языки, традиции и культурные миры.</p></div>
+<div class="cards">
+<article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=900&q=80')"><span>Города</span></div><div class="card-body"><h3>Архитектура и история</h3><p>Кремли, старинные монастыри, широкие проспекты и современные городские пространства рассказывают историю разных эпох.</p><a class="text-link" href="#places">Исследовать города ↗</a></div></article>
+<article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80')"><span>Природа</span></div><div class="card-body"><h3>Просторы без границ</h3><p>Тайга, степи, горы, озёра и морские побережья создают удивительное природное разнообразие.</p><a class="text-link" href="#places">Увидеть природу ↗</a></div></article>
+<article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80')"><span>Люди</span></div><div class="card-body"><h3>Традиции и открытия</h3><p>Культура, образование, ремёсла, спорт и наука складываются в общую историю, которую продолжают новые поколения.</p><a class="text-link" href="#values">Узнать больше ↗</a></div></article>
+</div>
+</section>
+<section class="quote" id="heritage"><div class="quote-inner">
+<div><div class="quote-mark">“</div><div class="eyebrow">Культурное наследие</div><h2>Память о прошлом.<br>Вдохновение для будущего.</h2><p>Литература, музыка, балет, живопись, инженерная мысль и космические достижения России известны далеко за её пределами. Беречь наследие — значит изучать его, задавать вопросы и передавать знания дальше.</p></div>
+<div class="stats"><div class="stat"><strong>1</strong><span>крупнейшая по площади страна мира</span></div><div class="stat"><strong>Много</strong><span>народов, языков и культурных традиций</span></div><div class="stat"><strong>Векa</strong><span>истории, архитектуры и искусства</span></div><div class="stat"><strong>Вперёд</strong><span>наука, образование и новые идеи</span></div></div>
+</div></section>
+<section class="container" id="places"><div class="section-head"><div><div class="kicker">Путешествие</div><h2>У каждой земли — свой характер</h2></div><p class="intro">Несколько образов страны: исторические центры, великие природные пространства и места, которые хочется увидеть своими глазами.</p></div>
+<div class="places">
+<article class="place-large"><div><div class="eyebrow">Сердце истории</div><h3>Москва</h3><p>Красная площадь, Кремль, музеи и ритм большого города — место встречи разных эпох.</p></div></article>
+<div class="place-stack">
+<article class="place-small" style="background-image:url('https://images.unsplash.com/photo-1547448415-e9f5b28e570d?auto=format&fit=crop&w=900&q=80')"><div><h3>Санкт-Петербург</h3><p>Мосты, каналы и архитектура северной столицы.</p></div></article>
+<article class="place-small" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80')"><div><h3>Байкал и природные просторы</h3><p>Тишина, масштаб и хрупкая красота природы.</p></div></article>
+</div>
+</div></section>
+<section class="values" id="values"><div class="container"><div class="section-head"><div><div class="kicker">Общее дело</div><h2>Что нас объединяет</h2></div><p class="intro">Любовь к родному краю может проявляться в повседневных делах — от заботы о близких до участия в жизни своего города.</p></div>
+<div class="values-grid">
+<div class="value"><div class="icon">📚</div><h3>Знание</h3><p>Изучать историю, культуру и достижения, сохраняя любознательность и критическое мышление.</p></div>
+<div class="value"><div class="icon">🤝</div><h3>Взаимное уважение</h3><p>Ценить людей разных культур и традиций, находить общее и помогать друг другу.</p></div>
+<div class="value"><div class="icon">🌿</div><h3>Забота о природе</h3><p>Беречь леса, реки, озёра и места, которые делают родной край особенным.</p></div>
+<div class="value"><div class="icon">🛠️</div><h3>Созидание</h3><p>Учиться, работать, создавать полезное и делать своё окружение лучше.</p></div>
+</div></div></section>
+</main>
+<footer><div class="footer-inner"><a class="brand" href="#home"><span class="emblem">✦</span><span>РОССИЯ</span></a><div class="footer-small">Учебно-информационный концепт о географии, культуре, истории и природе России. Фотографии загружаются из Unsplash при наличии интернета.</div><a class="text-link" style="color:#e6c477" href="#home">Наверх ↑</a></div></footer>
+</body></html>
